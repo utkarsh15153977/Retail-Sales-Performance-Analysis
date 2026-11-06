@@ -1,4 +1,4 @@
-# Python
+# Python bytecode and build artifacts
 __pycache__/
 *.py[cod]
 *$py.class
@@ -24,38 +24,44 @@ wheels/
 .installed.cfg
 *.egg
 
-# Testing & Coverage
+# Testing, Coverage & Profiling
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
+.nox/
 
-# Environment & Credentials
+# Environment, Secrets & Credentials
 .env
-.env.local
+.env.*
 *.env
+! .env.example
+credentials*
+*credential*
+*secret*
+*token*
+*.pem
+*.key
 
-# Database local artifacts
+# Local Databases & Dynamic Artifacts
 *.db
 *.sqlite
 *.sqlite3
 
-# Excel temporary lock files
+# Microsoft Excel Temporary Lock Files
 ~$*.xlsx
 ~$*.xls
 
-# IDE & Editor
+# IDE, Editor & OS Files
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS files
+*.tmp
+*.bak
+*.log
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
-
-# Large or processed data exports (optional, raw/processed tracked if needed)
-# Keep sample datasets in data/ but ignore transient temp files
-*.tmp
